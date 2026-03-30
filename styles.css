@@ -1536,6 +1536,194 @@ main {
 .page-header .header-meta { animation: fadeIn 0.6s ease 0.2s both; }
 
 /* ════════════════════════════════════════════════════════════
+   SECTION 0 — Pártok és támogatottságuk
+   ════════════════════════════════════════════════════════════ */
+
+.party-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.party-card {
+  background: var(--card);
+  border: 1px solid var(--border2);
+  border-top: 3px solid var(--party-color, var(--ink3));
+  border-radius: var(--r);
+  padding: 16px 18px;
+  position: relative;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.party-card:hover {
+  box-shadow: 0 4px 16px rgba(26,25,21,0.08);
+  transform: translateY(-1px);
+}
+.party-card-abbr {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--party-color, var(--ink));
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.party-card-name {
+  font-size: 12px;
+  color: var(--ink3);
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+.party-card-leader {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink2);
+  margin-bottom: 12px;
+}
+.party-card-pct {
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--party-color, var(--ink));
+  line-height: 1;
+}
+.party-card-pct-note {
+  font-size: 11px;
+  color: var(--ink3);
+  margin-top: 3px;
+  line-height: 1.4;
+}
+.party-card-threshold {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 20px;
+}
+.threshold-in  { background: #E8F5EB; color: #1A6B2E; }
+.threshold-out { background: #FEEDED; color: #A32D2D; }
+.threshold-edge { background: #FEF3E2; color: #8C5A00; }
+
+/* Poll comparison table */
+.poll-compare-wrap {
+  background: var(--card);
+  border: 1px solid var(--border2);
+  border-radius: var(--r);
+  overflow: hidden;
+  overflow-x: auto;
+  margin-bottom: 16px;
+}
+.poll-compare-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+}
+.poll-compare-table thead th {
+  padding: 10px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  border-bottom: 2px solid var(--border2);
+  text-align: left;
+  white-space: nowrap;
+}
+.poll-compare-table thead th:not(:first-child) { text-align: right; }
+.poll-compare-table tbody tr {
+  border-bottom: 1px solid var(--border);
+}
+.poll-compare-table tbody tr:last-child { border-bottom: none; }
+.poll-compare-table tbody tr:hover { background: var(--card2); }
+.poll-compare-table td {
+  padding: 11px 14px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.poll-compare-table td:not(:first-child) { text-align: right; }
+.poll-inst-name {
+  font-weight: 500;
+  color: var(--ink);
+  display: block;
+}
+.poll-inst-date {
+  font-size: 12px;
+  color: var(--ink3);
+}
+.poll-inst-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: 1px 6px;
+  border-radius: 20px;
+  margin-top: 3px;
+}
+.poll-tag-independent { background: #E8F5EB; color: #1A6B2E; }
+.poll-tag-gov { background: #FEEDED; color: #A32D2D; }
+.poll-pct {
+  font-weight: 600;
+  color: var(--ink);
+}
+.poll-pct-tisza  { color: #2A6DB5; }
+.poll-pct-fidesz { color: #C03030; }
+.poll-pct-mh     { color: #C07020; }
+.poll-pct-dk     { color: #8B1A4A; }
+.poll-pct-mkkp   { color: #2B7A3B; }
+
+/* Aggregate support bar */
+.poll-agg-wrap {
+  margin-bottom: 20px;
+}
+.poll-agg-label {
+  font-size: 13px;
+  color: var(--ink3);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.poll-agg-bar {
+  display: flex;
+  height: 32px;
+  border-radius: 6px;
+  overflow: hidden;
+  gap: 1px;
+}
+.poll-agg-seg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 6px;
+  position: relative;
+  transition: opacity var(--transition);
+}
+.poll-agg-seg:hover { opacity: .85; }
+.poll-agg-legend {
+  display: flex;
+  gap: 14px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.poll-agg-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--ink2);
+}
+.poll-agg-legend-dot {
+  width: 10px; height: 10px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════════════════════════════════════
    Responsive
    ════════════════════════════════════════════════════════════ */
 
