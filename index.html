@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parlamenti Erőtér 2026 — Magyar Országgyűlés elemzése</title>
+<meta name="description" content="Szavazati küszöbök, Tisza-forgatókönyvek, sarkalatos törvények, intézményi mandátumok és EU-korlátok interaktív elemzése a 2026-os választások előtt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     SIDEBAR
+     ══════════════════════════════════════════════════════════ -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <div class="sidebar-brand-eyebrow">Parlamenti elemzés</div>
+    <div class="sidebar-brand-title">Magyar<br><em>Erőtér</em></div>
+    <div class="sidebar-brand-year">2026 · Választási forgatókönyvek</div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a href="#section-1" class="nav-item" data-section="section-1">
+      <span class="nav-num">1</span>
+      <span class="nav-text">
+        Szavazati küszöbök
+        <span class="nav-sub">A 199 mandátum szintjei</span>
+      </span>
+    </a>
+
+    <a href="#section-2" class="nav-item" data-section="section-2">
+      <span class="nav-num">2</span>
+      <span class="nav-text">
+        Tisza-forgatókönyvek
+        <span class="nav-sub">4 lehetséges 2026-os jövő</span>
+      </span>
+    </a>
+
+    <a href="#section-3" class="nav-item" data-section="section-3">
+      <span class="nav-num">3</span>
+      <span class="nav-text">
+        Sarkalatos törvények
+        <span class="nav-sub">Tételes lista, kereshető</span>
+      </span>
+    </a>
+
+    <a href="#section-4" class="nav-item" data-section="section-4">
+      <span class="nav-num">4</span>
+      <span class="nav-text">
+        Intézményi időbomba
+        <span class="nav-sub">Mandátumok 2026–2030</span>
+      </span>
+    </a>
+
+    <a href="#section-5" class="nav-item" data-section="section-5">
+      <span class="nav-num">5</span>
+      <span class="nav-text">
+        Forgatókönyv-mátrix
+        <span class="nav-sub">A–D összehasonlítás</span>
+      </span>
+    </a>
+
+    <a href="#section-6" class="nav-item" data-section="section-6">
+      <span class="nav-num">6</span>
+      <span class="nav-text">
+        Bizalmatlansági indítvány
+        <span class="nav-sub">Hogyan működik?</span>
+      </span>
+    </a>
+
+    <a href="#section-7" class="nav-item" data-section="section-7">
+      <span class="nav-num">7</span>
+      <span class="nav-text">
+        EU/Nemzetközi korlátok
+        <span class="nav-sub">Ami 2/3-dal sem megy</span>
+      </span>
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    Forrás: <a href="https://www.parlament.hu" target="_blank" rel="noopener">parlament.hu</a> · Alaptörvény · Ogytv. · HHSZ<br>
+    Az elemzés tájékoztató jellegű.
+  </div>
+</aside>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     TOPBAR (mobile)
+     ══════════════════════════════════════════════════════════ -->
+<div class="topbar">
+  <button class="hamburger" id="hamburger" aria-label="Menü">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="topbar-title">Magyar <em>Erőtér</em> 2026</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     MAIN LAYOUT
+     ══════════════════════════════════════════════════════════ -->
+<div class="layout">
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="header-inner">
+      <div class="header-eyebrow">Parlamenti elemzés · 2026</div>
+      <h1>Magyar Országgyűlés –<br><em>szavazati küszöbök</em> és<br>választási erőterek</h1>
+      <p class="subtitle">Összefoglaló a minősített többséget igénylő döntésekről, a 2026-os választások lehetséges következményeiről, a sarkalatos törvények listájáról, az intézményi mandátumokról és az EU-s korlátokról.</p>
+      <div class="header-meta">
+        <div class="header-meta-item">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5" stroke-opacity=".5"/><path d="M6 3.5v3l2 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-opacity=".5"/></svg>
+          7 fejezet
+        </div>
+        <div class="header-meta-item">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="2" width="10" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5" stroke-opacity=".5"/><path d="M1 5h10" stroke="currentColor" stroke-width="1.5" stroke-opacity=".5"/></svg>
+          199 képviselő · Alaptörvény
+        </div>
+        <div class="header-meta-item">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-opacity=".5"/></svg>
+          Forrás: parlament.hu · 2026
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 1 — Szavazati küszöbök
+       ════════════════════════════════════════════════════════ -->
+  <section class="section" id="section-1">
+
+    <div class="section-intro" data-reveal>
+      <div class="section-label">
+        <span class="section-num">1</span>
+        Az Országgyűlés szavazati küszöbei
+      </div>
+      <h2 class="section-title">Mikor kell kétharmad,<br><em>kétharmad, vagy csak fél?</em></h2>
+      <p class="section-desc">199 képviselő ül az Országgyűlésben. A döntések típusától függően eltérő arányú igen szavazat szükséges az elfogadáshoz — az alaptörvény-módosítástól az ügyészválasztásig.</p>
+    </div>
+
+    <div class="seats-viz" data-reveal data-reveal-delay="1">
+      <div class="seats-viz-label">A 199 mandátum küszöbei szemléltetve</div>
+      <div class="bar-row">
+        <div class="bar-seg" data-tier="t6" style="width:19.6%;background:#888780;color:#fff;">39 (⅕)</div>
+        <div class="bar-seg" data-tier="t5" style="width:5%;background:#B4B2A9;"></div>
+        <div class="bar-seg" data-tier="t5" style="width:25.6%;background:#7F77DD;color:#fff;">50%+ = 100</div>
+        <div class="bar-seg" data-tier="t3" style="width:16.6%;background:#378ADD;color:#fff;">⅔ = 133</div>
+        <div class="bar-seg" data-tier="t2" style="width:13.6%;background:#BA7517;color:#fff;">⅘ = 160</div>
+        <div class="bar-seg" style="width:19.6%;background:#e9e5dc;"></div>
+      </div>
+      <div class="bar-legend">
+        <div class="bar-legend-item"><div class="bar-legend-dot" style="background:#888780"></div>1/5 = 39 fő (indítványozás)</div>
+        <div class="bar-legend-item"><div class="bar-legend-dot" style="background:#7F77DD"></div>50%+ = 100 fő</div>
+        <div class="bar-legend-item"><div class="bar-legend-dot" style="background:#378ADD"></div>2/3 összes = 133 fő</div>
+        <div class="bar-legend-item"><div class="bar-legend-dot" style="background:#BA7517"></div>4/5 jelenlévő</div>
+      </div>
+    </div>
+
+    <div class="threshold-tabs" data-reveal data-reveal-delay="2">
+      <button class="thresh-tab active" data-filter="all">Összes szint</button>
+      <button class="thresh-tab" data-filter="t1">⅔ összes</button>
+      <button class="thresh-tab" data-filter="t2">⅘ jelenlévő</button>
+      <button class="thresh-tab" data-filter="t3">⅔ jelenlévő (tv.)</button>
+      <button class="thresh-tab" data-filter="t4">⅔ jelenlévő (hat.)</button>
+      <button class="thresh-tab" data-filter="t5">50%+</button>
+      <button class="thresh-tab" data-filter="t6">⅕–¼ indítvány</button>
+    </div>
+
+    <!-- TIER 1 -->
+    <div class="tier-card t1" id="tc1" data-tier="t1" data-reveal data-reveal-delay="1">
+      <div class="tier-header" onclick="toggleTier('tc1')">
+        <div class="tier-badge t1"><div class="frac">⅔</div><div class="blabel">összes kép.</div></div>
+        <div class="tier-info">
+          <div class="tier-title-row">
+            <div class="tname">Kétharmad – minden képviselő</div>
+            <span class="tier-count">14+ döntéstípus</span>
+          </div>
+          <div class="tscope">133 igen szavazat szükséges (199-ből) — jelenlét nem számít</div>
+        </div>
+        <span class="tier-chevron">▶</span>
+      </div>
+      <div class="tier-items">
+        <div class="tier-items-inner">
+          <div class="tier-item"><div class="tier-item-dot t1"></div><div><span>Alaptörvény elfogadása és módosítása</span><span class="tier-item-ref">Alaptörvény S) cikk (2)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t1"></div><div><span>Köztársasági elnök megválasztása (1. fordulóban)</span><span class="tier-item-ref">Alaptörvény 11. cikk (3)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t1"></div><div><span>Köztársasági elnök megfosztásának megindítása</span><span class="tier-item-ref">Alaptörvény 13. cikk (3)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t1"></div><div><span>Alkotmánybírák megválasztása (12 évre)</span><span class="tier-item-ref">Alaptörvény 24. cikk (8)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t1"></div><div><span>OBH elnöke megválasztása (9 évre)</span><span class="tier-item-ref">Alaptörvény 25. cikk (6)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t1"></div><div><span>Kúria elnöke megválasztása (9 évre)</span><span class="tier-item-ref">Alaptörvény 26. cikk (3)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t1"></div><div><span>Legfőbb ügyész megválasztása (9 évre)</span><span class="tier-item-ref">Alaptörvény 29. cikk (4)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t1"></div><div><span>Alapvető jogok biztosa + helyettesei (6 évre)</span><span class="tier-item-ref">Alaptörvény 30. cikk (3)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t1"></div><div><span>Állami Számvevőszék elnöke (12 évre)</span><span class="tier-item-ref">Alaptörvény 43. cikk (2)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t1"></div><div><span>Hadiállapot kihirdetése, háborús helyzet kinyilvánítása</span><span class="tier-item-ref">Alaptörvény 49. cikk (2)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t1"></div><div><span>Szükségállapot kihirdetése és meghosszabbítása</span><span class="tier-item-ref">Alaptörvény 50. cikk (2)–(3)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t1"></div><div><span>EU hitelezési felhatalmazás</span><span class="tier-item-ref">Alaptörvény 37. cikk (7)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t1"></div><div><span>EU hatásköri átruházáshoz felhatalmazás</span><span class="tier-item-ref">Alaptörvény E) cikk (4)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t1"></div><div><span>Zárt ülés tartása</span><span class="tier-item-ref">Alaptörvény 5. cikk (1)</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 2 -->
+    <div class="tier-card t2" id="tc2" data-tier="t2" data-reveal data-reveal-delay="2">
+      <div class="tier-header" onclick="toggleTier('tc2')">
+        <div class="tier-badge t2"><div class="frac">⅘</div><div class="blabel">jelenlévő</div></div>
+        <div class="tier-info">
+          <div class="tier-title-row">
+            <div class="tname">Négyötöd – jelenlévők</div>
+            <span class="tier-count">1 döntéstípus</span>
+          </div>
+          <div class="tscope">Ritka, kivételes esetben alkalmazható</div>
+        </div>
+        <span class="tier-chevron">▶</span>
+      </div>
+      <div class="tier-items">
+        <div class="tier-items-inner">
+          <div class="tier-item"><div class="tier-item-dot t2"></div><div><span>Eltérés a határozati házszabályi rendelkezésektől (kivételes esetben, vita nélkül)</span><span class="tier-item-ref">HHSZ 65. § (1)</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 3 -->
+    <div class="tier-card t3" id="tc3" data-tier="t3" data-reveal data-reveal-delay="2">
+      <div class="tier-header" onclick="toggleTier('tc3')">
+        <div class="tier-badge t3"><div class="frac">⅔</div><div class="blabel">jelenlévő (tv.)</div></div>
+        <div class="tier-info">
+          <div class="tier-title-row">
+            <div class="tname">Kétharmad – jelenlévők (sarkalatos törvény)</div>
+            <span class="tier-count">2 döntéstípus</span>
+          </div>
+          <div class="tscope">Sarkalatos törvények és házszabály</div>
+        </div>
+        <span class="tier-chevron">▶</span>
+      </div>
+      <div class="tier-items">
+        <div class="tier-items-inner">
+          <div class="tier-item"><div class="tier-item-dot t3"></div><div><span>Sarkalatos törvény elfogadása és módosítása</span><span class="tier-item-ref">Alaptörvény T) cikk (4)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t3"></div><div><span>Házszabályi rendelkezések elfogadása</span><span class="tier-item-ref">Alaptörvény 5. cikk (7)</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 4 -->
+    <div class="tier-card t4" id="tc4" data-tier="t4" data-reveal data-reveal-delay="3">
+      <div class="tier-header" onclick="toggleTier('tc4')">
+        <div class="tier-badge t4"><div class="frac">⅔</div><div class="blabel">jelenlévő (hat.)</div></div>
+        <div class="tier-info">
+          <div class="tier-title-row">
+            <div class="tname">Kétharmad – jelenlévők (határozat)</div>
+            <span class="tier-count">27+ döntéstípus</span>
+          </div>
+          <div class="tscope">Személyi ügyek, veszélyhelyzet, médiahatóság</div>
+        </div>
+        <span class="tier-chevron">▶</span>
+      </div>
+      <div class="tier-items">
+        <div class="tier-items-inner">
+          <div class="tier-item"><div class="tier-item-dot t4"></div><div><span>Képviselő mandátumának megszűnése, összeférhetetlenség</span><span class="tier-item-ref">Alaptörvény 4. cikk (4)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t4"></div><div><span>Köztársasági elnök munkaképtelenségének megállapítása</span><span class="tier-item-ref">Alaptörvény 12. cikk (4)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t4"></div><div><span>Miniszterelnök összeférhetetlenségének kimondása</span><span class="tier-item-ref">Alaptörvény 20. cikk (4)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t4"></div><div><span>Veszélyhelyzeti felhatalmazás (törvényektől eltérés)</span><span class="tier-item-ref">Alaptörvény 53. cikk (1) b)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t4"></div><div><span>Képviselő mentelmi jogának felfüggesztése</span><span class="tier-item-ref">Ogytv. 61/A. § (2)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t4"></div><div><span>Médiatanács elnöke + 4 tagjának megválasztása</span><span class="tier-item-ref">Mttv. 124. § (1)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t4"></div><div><span>Közszolgálati Közalapítvány Kuratóriuma tagjainak megválasztása</span><span class="tier-item-ref">Mttv. 86. § (1)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t4"></div><div><span>Nemzeti Választási Bizottság tagjainak megválasztása</span><span class="tier-item-ref">Ve. 20. § (2)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t4"></div><div><span>Sürgős tárgyalás elrendelése</span><span class="tier-item-ref">HHSZ 60. § (7)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t4"></div><div><span>Nemzeti Emlékezet Bizottsága elnöke és tagjainak megválasztása</span><span class="tier-item-ref">NEB tv. 7. § (1)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t4"></div><div><span>Kúria elnöke, OBH elnöke, legfőbb ügyész, ombudsman mentelmi jogának felfüggesztése</span><span class="tier-item-ref">Ogytv. 61/A. § (2)</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 5 -->
+    <div class="tier-card t5" id="tc5" data-tier="t5" data-reveal data-reveal-delay="3">
+      <div class="tier-header" onclick="toggleTier('tc5')">
+        <div class="tier-badge t5"><div class="frac">50%+</div><div class="blabel">összes kép.</div></div>
+        <div class="tier-info">
+          <div class="tier-title-row">
+            <div class="tname">Egyszerű többség+ – minden képviselő</div>
+            <span class="tier-count">4 döntéstípus</span>
+          </div>
+          <div class="tscope">100 igen szavazat szükséges (199-ből)</div>
+        </div>
+        <span class="tier-chevron">▶</span>
+      </div>
+      <div class="tier-items">
+        <div class="tier-items-inner">
+          <div class="tier-item"><div class="tier-item-dot t5"></div><div><span>Miniszterelnök megválasztása</span><span class="tier-item-ref">Alaptörvény 16. cikk (4)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t5"></div><div><span>Konstruktív bizalmatlansági indítvány elfogadása és új miniszterelnök egyidejű megválasztása</span><span class="tier-item-ref">Alaptörvény 21. cikk (2)–(3)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t5"></div><div><span>Kivételes eljárásban tárgyalás elrendelése</span><span class="tier-item-ref">HHSZ 62. § (1)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t5"></div><div><span>Politikai nyilatkozat elfogadása</span><span class="tier-item-ref">HHSZ 82/A. § (3)</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 6 -->
+    <div class="tier-card t6" id="tc6" data-tier="t6" data-reveal data-reveal-delay="4">
+      <div class="tier-header" onclick="toggleTier('tc6')">
+        <div class="tier-badge t6"><div class="frac">⅕–¼</div><div class="blabel">indítványhoz</div></div>
+        <div class="tier-info">
+          <div class="tier-title-row">
+            <div class="tname">Egyötöd / egynegyed – indítványozási küszöb</div>
+            <span class="tier-count">8 esetkör</span>
+          </div>
+          <div class="tscope">Nem szavazási arány, csak kezdeményezéshez kell</div>
+        </div>
+        <span class="tier-chevron">▶</span>
+      </div>
+      <div class="tier-items">
+        <div class="tier-items-inner">
+          <div class="tier-item"><div class="tier-item-dot t6"></div><div><span>Köztársasági elnök jelöléséhez: legalább 1/5 írásbeli ajánlás</span><span class="tier-item-ref">Alaptörvény 11. cikk (2)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t6"></div><div><span>Elnök megfosztásának indítványozásához: 1/5 szükséges</span><span class="tier-item-ref">Alaptörvény 13. cikk (2)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t6"></div><div><span>Bizalmatlansági indítvány benyújtásához: 1/5</span><span class="tier-item-ref">Alaptörvény 21. cikk (1)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t6"></div><div><span>Alkotmánybírósági normakontroll kezdeményezéséhez: 1/4</span><span class="tier-item-ref">Alaptörvény 24. cikk (2) e)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t6"></div><div><span>Vizsgálóbizottság létrehozásának kezdeményezése: 1/5</span><span class="tier-item-ref">Ogytv. 24. § (2)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t6"></div><div><span>Rendkívüli ülésszak összehívásának kérése: 1/5</span><span class="tier-item-ref">Ogytv. 35. § (1)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t6"></div><div><span>Átfogó politikai vita indítványozása: 1/5</span><span class="tier-item-ref">HHSZ 86. § (1)</span></div></div>
+          <div class="tier-item"><div class="tier-item-dot t6"></div><div><span>Alaptörvény eljárási felülvizsgálatának kérése: 1/4 (kihirdetéstől 30 napon belül)</span><span class="tier-item-ref">Alaptörvény 24. cikk (5) b)</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="key-note" data-reveal>
+      <strong>Fontos különbség:</strong> Az „összes képviselő" arány mind a 199 mandátumra vonatkozik – a jelenlét nem számít. A „jelenlévő képviselők" aránya csak az éppen szavazókhoz viszonyít – így kisebb plénumon alacsonyabb abszolút számot is jelenthet.
+    </div>
+
+  </section><!-- /section-1 -->
+
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 2 — Tisza-forgatókönyvek
+       ════════════════════════════════════════════════════════ -->
+  <section class="section" id="section-2">
+
+    <div class="section-intro" data-reveal>
+      <div class="section-label">
+        <span class="section-num">2</span>
+        Tisza Párt választási forgatókönyvei
+      </div>
+      <h2 class="section-title">Mit tehet a Tisza<br><em>a 2026-os választás után?</em></h2>
+      <p class="section-desc">Négy lehetséges parlamentáris helyzet elemzése — a mandátummegoszlástól kezdve a konkrét hatásköri lehetőségekig és blokkolókig.</p>
+    </div>
+
+    <div class="scenario-tabs" data-reveal>
+      <button class="sc-tab active" data-sc="1" onclick="showSc(1)">A · Tisza egyszerű többség</button>
+      <button class="sc-tab" data-sc="2" onclick="showSc(2)">B · Tisza 2/3</button>
+      <button class="sc-tab" data-sc="3" onclick="showSc(3)">C · MH + Fidesz koalíció</button>
+      <button class="sc-tab" data-sc="4" onclick="showSc(4)">D · MH + Tisza koalíció</button>
+    </div>
+
+    <!-- SC A -->
+    <div class="sc-panel active" id="sc1">
+      <div class="sc-header">
+        <span class="sc-badge" style="background:var(--tisza-l);color:#0C447C;">A forgatókönyv</span>
+        <div>
+          <div class="sc-title">Tisza nyert, de nincs meg a 2/3 — Fidesz az ellenzék</div>
+          <div class="sc-sub">Tisza ~52–60% · Fidesz ~30–40% · Mi Hazánk nem kerül be</div>
+        </div>
+      </div>
+      <div class="seats-viz" style="margin-bottom:12px;">
+        <div class="seats-viz-label">Mandátummegoszlás (becsült)</div>
+        <div class="bar-row">
+          <div class="bar-seg" style="width:57%;background:var(--tisza);color:#fff;">Tisza ~114</div>
+          <div class="bar-seg" style="width:43%;background:var(--fidesz);color:#fff;">Fidesz ~85</div>
+        </div>
+        <div class="bar-legend">
+          <div class="bar-legend-item"><div class="bar-legend-dot" style="background:var(--tisza)"></div>Tisza</div>
+          <div class="bar-legend-item"><div class="bar-legend-dot" style="background:var(--fidesz)"></div>Fidesz</div>
+        </div>
+      </div>
+      <div class="powers-grid">
+        <div class="power-card">
+          <div class="power-card-title">Megvan — egyszerű törvények</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Sima törvények elfogadása és módosítása</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Éves költségvetés</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Kormányprogram rendeletekkel</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Miniszterelnök és kormánytagok megbízatása</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Köztársasági elnök jelölése</div>
+        </div>
+        <div class="power-card">
+          <div class="power-card-title">Nem megy — kétharmad kell</div>
+          <div class="pitem"><div class="pdot pdot-no"></div>Alaptörvény módosítása</div>
+          <div class="pitem"><div class="pdot pdot-no"></div>Sarkalatos törvények (választási rendszer, bíróság, médiatörvény)</div>
+          <div class="pitem"><div class="pdot pdot-no"></div>Alkotmánybírák cseréje</div>
+          <div class="pitem"><div class="pdot pdot-no"></div>Legfőbb ügyész leváltása</div>
+          <div class="pitem"><div class="pdot pdot-no"></div>OBH elnöke, Kúria elnöke leváltása</div>
+        </div>
+      </div>
+      <div class="alert-box alert-danger">
+        <div class="alert-title">A legfontosabb blokkoló: a sarkalatos törvények</div>
+        <p>Magyarország jogi rendszerének legkritikusabb elemei — választási törvény, bírói függetlenség, ügyészség, médiaszabályozás, egyházi törvény, közoktatás — sarkalatos törvények. Ezeket a Fidesz 2010–2014 között sarkalatossá tette. A Tiszának önmagában nem lesz elég szavazata ezek megváltoztatásához.</p>
+      </div>
+      <div class="alert-box alert-warn">
+        <div class="alert-title">Köztársasági elnök — közvetett blokk</div>
+        <p>Sulyok Tamás megbízatása 2029-ig tart. Törvényeket küldhet vissza az Alkotmánybírósághoz, ami az egyszerű törvényhozást is lassíthatja.</p>
+      </div>
+      <div class="verdict-box">
+        <div class="verdict-label">Összefoglaló</div>
+        <div class="verdict-text">Kormányzás lehetséges, de a rendszer struktúráját (választási törvény, bíróságok, médiatörvény) nem lehet megváltoztatni. „Kezek a háton" kormányzás.</div>
+      </div>
+    </div>
+
+    <!-- SC B -->
+    <div class="sc-panel" id="sc2">
+      <div class="sc-header">
+        <span class="sc-badge" style="background:var(--green-l);color:#085041;">B forgatókönyv</span>
+        <div>
+          <div class="sc-title">Tisza megszerzi a 2/3-ot — Fidesz az ellenzék</div>
+          <div class="sc-sub">Tisza 67%+ mandátum · Fidesz az egyetlen ellenzéki párt</div>
+        </div>
+      </div>
+      <div class="seats-viz" style="margin-bottom:12px;">
+        <div class="seats-viz-label">Mandátummegoszlás (becsült)</div>
+        <div class="bar-row">
+          <div class="bar-seg" style="width:68%;background:var(--green);color:#fff;">Tisza ~135+</div>
+          <div class="bar-seg" style="width:32%;background:var(--fidesz);color:#fff;">Fidesz ~64</div>
+        </div>
+        <div class="bar-legend">
+          <div class="bar-legend-item"><div class="bar-legend-dot" style="background:var(--green)"></div>Tisza (2/3+)</div>
+          <div class="bar-legend-item"><div class="bar-legend-dot" style="background:var(--fidesz)"></div>Fidesz</div>
+        </div>
+      </div>
+      <div class="powers-grid">
+        <div class="power-card">
+          <div class="power-card-title">Megvan — teljes alkotmányos mozgástér</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Alaptörvény módosítása</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Sarkalatos törvények módosítása (választási rendszer, bíróság, médiatörvény)</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Alkotmánybírók cseréje (mandátum lejártakor)</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Legfőbb ügyész leváltása és új megválasztása</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>OBH elnöke, Kúria elnöke cseréje</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Médiatanács teljes cseréje</div>
+        </div>
+        <div class="power-card">
+          <div class="power-card-title">Korlátok — ami így sem megy rögtön</div>
+          <div class="pitem"><div class="pdot pdot-warn"></div>AB-tagok mandátumuk lejártáig maradnak (nem leválthatók)</div>
+          <div class="pitem"><div class="pdot pdot-warn"></div>EU-s jog bizonyos területeken korlátoz</div>
+          <div class="pitem"><div class="pdot pdot-warn"></div>Alaptörvény 36–37. cikke adósságkorlátozást tartalmaz</div>
+        </div>
+      </div>
+      <div class="alert-box alert-ok">
+        <div class="alert-title">Teljes alkotmányos mozgástér</div>
+        <p>Ez az egyetlen forgatókönyv, amelyben a Tisza képes az elmúlt 15 év rendszerszintű változásait visszacsinálni: az Alaptörvény átírása, a bírói rendszer helyreállítása, a médiatörvény és a közszolgálati média reformja mind lehetségessé válik.</p>
+      </div>
+      <div class="alert-box alert-warn">
+        <div class="alert-title">Intézményi tehetetlenség — nem azonnali</div>
+        <p>Az Alkotmánybíróság jelenlegi tagjai 12 évre szólnak. Leváltani nem lehet őket. A teljes csere 4–8 évig is eltarthat — lásd a 4. fejezetet.</p>
+      </div>
+      <div class="verdict-box">
+        <div class="verdict-label">Összefoglaló</div>
+        <div class="verdict-text">Teljes körű reformlehetőség — de a végrehajtás hosszú éveket vesz igénybe. Az alkotmányos keret megváltoztatható, az intézményi átalakulás lassabb.</div>
+      </div>
+    </div>
+
+    <!-- SC C -->
+    <div class="sc-panel" id="sc3">
+      <div class="sc-header">
+        <span class="sc-badge" style="background:var(--mihaz-l);color:#633806;">C forgatókönyv</span>
+        <div>
+          <div class="sc-title">Tisza nyert, nincs 2/3 — Mi Hazánk a Fidesszel koalícióban</div>
+          <div class="sc-sub">Tisza ~50–55% · Fidesz + Mi Hazánk együtt ~40–45%</div>
+        </div>
+      </div>
+      <div class="seats-viz" style="margin-bottom:12px;">
+        <div class="seats-viz-label">Mandátummegoszlás (becsült)</div>
+        <div class="bar-row">
+          <div class="bar-seg" style="width:53%;background:var(--tisza);color:#fff;">Tisza ~105</div>
+          <div class="bar-seg" style="width:35%;background:var(--fidesz);color:#fff;">Fidesz ~70</div>
+          <div class="bar-seg" style="width:12%;background:var(--mihaz);color:#fff;">MH ~24</div>
+        </div>
+        <div class="bar-legend">
+          <div class="bar-legend-item"><div class="bar-legend-dot" style="background:var(--tisza)"></div>Tisza</div>
+          <div class="bar-legend-item"><div class="bar-legend-dot" style="background:var(--fidesz)"></div>Fidesz</div>
+          <div class="bar-legend-item"><div class="bar-legend-dot" style="background:var(--mihaz)"></div>Mi Hazánk</div>
+        </div>
+      </div>
+      <div class="powers-grid">
+        <div class="power-card">
+          <div class="power-card-title">Megvan — ha Tisza egyedül szavaz</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Egyszerű törvények (ha nincs szoros szavazás)</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Éves költségvetés</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Miniszterelnök megbízatása</div>
+        </div>
+        <div class="power-card">
+          <div class="power-card-title">Nem megy semmiképpen</div>
+          <div class="pitem"><div class="pdot pdot-no"></div>Alaptörvény módosítása (Fidesz+MH blokkolja)</div>
+          <div class="pitem"><div class="pdot pdot-no"></div>Sarkalatos törvények</div>
+          <div class="pitem"><div class="pdot pdot-no"></div>Alkotmánybírák, ügyész, bíróság-vezetők cseréje</div>
+        </div>
+      </div>
+      <div class="alert-box alert-danger">
+        <div class="alert-title">Blokkoló koalíció — a legrosszabb eset Tiszának</div>
+        <p>Ha a Fidesz és a Mi Hazánk együtt meghaladják a 66 mandátumot, nemcsak a 2/3-os döntéseket lehet megakadályozni, hanem az egyszerű szavazásokon is kiszámíthatatlan a helyzet. Frakciófegyelmi probléma esetén a Tisza akár vereséget is szenvedhet egy-egy szavazáson.</p>
+      </div>
+      <div class="alert-box alert-warn">
+        <div class="alert-title">Kormányzati instabilitás kockázata</div>
+        <p>A konstruktív bizalmatlansági indítványhoz a képviselők több mint felének szavazata kell. Ha a Fidesz és a Mi Hazánk összefog és talál egy jelöltet, akit Tisza-párti képviselők is megszavaznak, kormányváltás következhet be a ciklus közben.</p>
+      </div>
+      <div class="verdict-box">
+        <div class="verdict-label">Összefoglaló</div>
+        <div class="verdict-text">A Tisza kormányoz, de minden egyes szavazás kötéltáncot jelent. A strukturális reform teljesen lehetetlen, és a kormányzat folyamatos destabilizálási kísérleteknek lesz kitéve.</div>
+      </div>
+    </div>
+
+    <!-- SC D -->
+    <div class="sc-panel" id="sc4">
+      <div class="sc-header">
+        <span class="sc-badge" style="background:var(--purple-l);color:#3C3489;">D forgatókönyv</span>
+        <div>
+          <div class="sc-title">Tisza nyert, nincs 2/3 — Mi Hazánk a Tiszával koalícióban</div>
+          <div class="sc-sub">Tisza + Mi Hazánk együtt ~58–65% · Fidesz ~35–40%</div>
+        </div>
+      </div>
+      <div class="seats-viz" style="margin-bottom:12px;">
+        <div class="seats-viz-label">Mandátummegoszlás (becsült)</div>
+        <div class="bar-row">
+          <div class="bar-seg" style="width:53%;background:var(--tisza);color:#fff;">Tisza ~105</div>
+          <div class="bar-seg" style="width:12%;background:#7F77DD;color:#fff;">MH ~24</div>
+          <div class="bar-seg" style="width:35%;background:var(--fidesz);color:#fff;">Fidesz ~70</div>
+        </div>
+        <div class="bar-legend">
+          <div class="bar-legend-item"><div class="bar-legend-dot" style="background:var(--tisza)"></div>Tisza</div>
+          <div class="bar-legend-item"><div class="bar-legend-dot" style="background:#7F77DD"></div>Mi Hazánk (koalíció)</div>
+          <div class="bar-legend-item"><div class="bar-legend-dot" style="background:var(--fidesz)"></div>Fidesz</div>
+        </div>
+      </div>
+      <div class="powers-grid">
+        <div class="power-card">
+          <div class="power-card-title">Megvan — stabilabb egyszerű többség</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Egyszerű törvények — komfortosabb többség</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Éves költségvetés stabilabban</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Miniszterelnök megbízatása, kormányalakítás</div>
+          <div class="pitem"><div class="pdot pdot-yes"></div>Politikai nyilatkozatok, kivételes eljárások</div>
+        </div>
+        <div class="power-card">
+          <div class="power-card-title">Korlátok — a 2/3 még hiányzik</div>
+          <div class="pitem"><div class="pdot pdot-warn"></div>Tisza + Mi Hazánk együtt általában nem éri el a 133 mandátumot</div>
+          <div class="pitem"><div class="pdot pdot-no"></div>Alaptörvény módosítása — nem megy</div>
+          <div class="pitem"><div class="pdot pdot-no"></div>Sarkalatos törvények módosítása — nem megy</div>
+          <div class="pitem"><div class="pdot pdot-no"></div>Alkotmánybírák, ügyész, bírósági elnökök cseréje</div>
+        </div>
+      </div>
+      <div class="alert-box alert-warn">
+        <div class="alert-title">Ideológiai feszültség a koalícióban</div>
+        <p>A Mi Hazánk radikálisan jobboldali, euroszkeptikus párt. Magyar Péter nyugati orientációjával számos ponton ellentétben állnak — EU-tagság, NATO, migrációs és kisebbségi kérdésekben. A koalíció minden ellentmondásos szavazásnál roppanhat.</p>
+      </div>
+      <div class="alert-box alert-ok">
+        <div class="alert-title">Előny az A forgatókönyvhöz képest</div>
+        <p>Az egyszerű törvényhozás stabilabb és kiszámíthatóbb. A Tisza-kormány nem függ minden szavazásnál teljes frakciófegyelemtől, és a konstruktív bizalmatlansági indítvány is kevésbé fenyegető.</p>
+      </div>
+      <div class="verdict-box">
+        <div class="verdict-label">Összefoglaló</div>
+        <div class="verdict-text">Stabilabb kormányzás, mint A-ban, de az alkotmányos reform itt is lehetetlen. A koalíció ideológiai ellentmondása az egyik legnagyobb kockázat — és presztízsárat is jelent Magyar Péternek.</div>
+      </div>
+    </div>
+
+    <div class="legend-strip" data-reveal>
+      <strong style="font-size:11px;color:var(--ink2);">Cselekvési szabadság sorrendje:</strong>
+      <div class="legend-strip-item"><div class="legend-strip-dot" style="background:var(--green)"></div>B – legjobb</div>
+      <div class="legend-strip-item"><div class="legend-strip-dot" style="background:#7F77DD"></div>D</div>
+      <div class="legend-strip-item"><div class="legend-strip-dot" style="background:var(--tisza)"></div>A</div>
+      <div class="legend-strip-item"><div class="legend-strip-dot" style="background:var(--fidesz)"></div>C – legrosszabb</div>
+    </div>
+
+  </section><!-- /section-2 -->
+
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 3 — Sarkalatos törvények
+       ════════════════════════════════════════════════════════ -->
+  <section class="section" id="section-3">
+
+    <div class="section-intro" data-reveal>
+      <div class="section-label">
+        <span class="section-num">3</span>
+        Sarkalatos törvények tételes listája
+      </div>
+      <h2 class="section-title">Melyik törvény igényel<br><em>kétharmadot a módosításhoz?</em></h2>
+      <p class="section-desc">Magyarország sarkalatos (kardinális) törvényei a jelenlévő képviselők kétharmadának szavazatával fogadhatók el vagy módosíthatók. Ezeket túlnyomórészt a Fidesz alkotta meg 2011–2014 között. A lista szűrhető és kereshető.</p>
+    </div>
+
+    <div class="table-controls" data-reveal>
+      <input type="search" id="sarkalatos-search" class="table-search" placeholder="Keresés törvény neve, kategória alapján…" aria-label="Keresés">
+      <div class="category-filter">
+        <button class="cat-btn active" data-cat="all">Összes</button>
+        <button class="cat-btn" data-cat="igazságszolgáltatás">Igazságszolgáltatás</button>
+        <button class="cat-btn" data-cat="választás">Választás</button>
+        <button class="cat-btn" data-cat="média">Média</button>
+        <button class="cat-btn" data-cat="oktatás">Oktatás</button>
+        <button class="cat-btn" data-cat="egyéb">Egyéb</button>
+      </div>
+    </div>
+
+    <div class="sarkalatos-table-wrap" data-reveal>
+      <table class="sarkalatos-table" aria-label="Sarkalatos törvények listája">
+        <thead>
+          <tr>
+            <th style="width:38%">Törvény neve</th>
+            <th style="width:16%">Kategória</th>
+            <th style="width:28%">Törvényszám</th>
+            <th style="width:10%">Sarkalatos</th>
+            <th style="width:8%">Alaptörvény hivatkozás</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Igazságszolgáltatás -->
+          <tr class="sarkalatos-row" data-name="alkotmánybíróság" data-cat="igazságszolgáltatás" data-year="2012" data-law="2011. évi CLI. tv.">
+            <td>Az Alkotmánybíróságról</td>
+            <td><span class="cat-chip" style="background:#FCEBEB;color:#A32D2D;">Igazságszolgáltatás</span></td>
+            <td>2011. évi CLI. tv.</td>
+            <td>2012 óta</td>
+            <td>24. cikk</td>
+          </tr>
+          <tr class="sarkalatos-row" data-name="bíróságok szervezete igazgatása" data-cat="igazságszolgáltatás" data-year="2012" data-law="2011. évi CLXI. tv.">
+            <td>A bíróságok szervezetéről és igazgatásáról</td>
+            <td><span class="cat-chip" style="background:#FCEBEB;color:#A32D2D;">Igazságszolgáltatás</span></td>
+            <td>2011. évi CLXI. tv.</td>
+            <td>2012 óta</td>
+            <td>25–26. cikk</td>
+          </tr>
+          <tr class="sarkalatos-row" data-name="bírák jogállása javadalmazás" data-cat="igazságszolgáltatás" data-year="2012" data-law="2011. évi CLXII. tv.">
+            <td>A bírák jogállásáról és javadalmazásáról</td>
+            <td><span class="cat-chip" style="background:#FCEBEB;color:#A32D2D;">Igazságszolgáltatás</span></td>
+            <td>2011. évi CLXII. tv.</td>
+            <td>2012 óta</td>
+            <td>26. cikk</td>
+          </tr>
+          <tr class="sarkalatos-row" data-name="ügyészség" data-cat="igazságszolgáltatás" data-year="2012" data-law="2011. évi CLXIII. tv.">
+            <td>Az ügyészségről</td>
+            <td><span class="cat-chip" style="background:#FCEBEB;color:#A32D2D;">Igazságszolgáltatás</span></td>
+            <td>2011. évi CLXIII. tv.</td>
+            <td>2012 óta</td>
+            <td>29. cikk</td>
+          </tr>
+          <tr class="sarkalatos-row" data-name="alapvető jogok biztosa ombudsman" data-cat="igazságszolgáltatás" data-year="2012" data-law="2011. évi CXI. tv.">
+            <td>Az alapvető jogok biztosáról (ombudsman)</td>
+            <td><span class="cat-chip" style="background:#FCEBEB;color:#A32D2D;">Igazságszolgáltatás</span></td>
+            <td>2011. évi CXI. tv.</td>
+            <td>2012 óta</td>
+            <td>30. cikk</td>
+          </tr>
+          <tr class="sarkalatos-row" data-name="állami számvevőszék" data-cat="igazságszolgáltatás" data-year="2012" data-law="2011. évi LXVI. tv.">
+            <td>Az Állami Számvevőszékről</td>
+            <td><span class="cat-chip" style="background:#FCEBEB;color:#A32D2D;">Igazságszolgáltatás</span></td>
+            <td>2011. évi LXVI. tv.</td>
+            <td>2012 óta</td>
+            <td>43. cikk</td>
+          </tr>
+          <!-- Választás -->
+          <tr class="sarkalatos-row" data-name="választási eljárás" data-cat="választás" data-year="2013" data-law="2013. évi XXXVI. tv.">
+            <td>A választási eljárásról</td>
+            <td><span class="cat-chip" style="background:#E6F1FB;color:#185FA5;">Választás</span></td>
+            <td>2013. évi XXXVI. tv.</td>
+            <td>2013 óta</td>
+            <td>XXIII. cikk</td>
+          </tr>
+          <tr class="sarkalatos-row" data-name="országgyűlési képviselők választása" data-cat="választás" data-year="2012" data-law="2011. évi CCIII. tv.">
+            <td>Az országgyűlési képviselők választásáról</td>
+            <td><span class="cat-chip" style="background:#E6F1FB;color:#185FA5;">Választás</span></td>
+            <td>2011. évi CCIII. tv.</td>
+            <td>2012 óta</td>
+            <td>2. cikk</td>
+          </tr>
+          <tr class="sarkalatos-row" data-name="helyi önkormányzatok önkormányzati választás" data-cat="választás" data-year="2012" data-law="2010. évi L. tv.">
+            <td>A helyi önkormányzati képviselők és polgármesterek választásáról</td>
+            <td><span class="cat-chip" style="background:#E6F1FB;color:#185FA5;">Választás</span></td>
+            <td>2010. évi L. tv.</td>
+            <td>2012 óta</td>
+            <td>35. cikk</td>
+          </tr>
+          <!-- Média -->
+          <tr class="sarkalatos-row" data-name="médiaszolgáltatás tömegkommunikáció médiatörvény" data-cat="média" data-year="2011" data-law="2010. évi CLXXXV. tv.">
+            <td>A médiaszolgáltatásokról és tömegkommunikációról (Mttv.)</td>
+            <td><span class="cat-chip" style="background:var(--mihaz-l);color:#854F0B;">Média</span></td>
+            <td>2010. évi CLXXXV. tv.</td>
+            <td>2011 óta</td>
+            <td>IX. cikk</td>
+          </tr>
+          <tr class="sarkalatos-row" data-name="sajtószabadság médiatartalom" data-cat="média" data-year="2011" data-law="2010. évi CIV. tv.">
+            <td>A sajtószabadságról és a médiatartalmak alapszabályairól (Smtv.)</td>
+            <td><span class="cat-chip" style="background:var(--mihaz-l);color:#854F0B;">Média</span></td>
+            <td>2010. évi CIV. tv.</td>
+            <td>2011 óta</td>
+            <td>IX. cikk</td>
+          </tr>
+          <!-- Oktatás / egyház -->
+          <tr class="sarkalatos-row" data-name="köznevelés oktatás iskola" data-cat="oktatás" data-year="2012" data-law="2011. évi CXC. tv.">
+            <td>A nemzeti köznevelésről</td>
+            <td><span class="cat-chip" style="background:var(--green-l);color:#0F6E56;">Oktatás</span></td>
+            <td>2011. évi CXC. tv.</td>
+            <td>2012 óta</td>
+            <td>XI. cikk</td>
+          </tr>
+          <tr class="sarkalatos-row" data-name="lelkiismereti vallásszabadság egyházi törvény" data-cat="oktatás" data-year="2012" data-law="2011. évi CCVI. tv.">
+            <td>A lelkiismereti és vallásszabadság jogáról és az egyházakról</td>
+            <td><span class="cat-chip" style="background:var(--green-l);color:#0F6E56;">Oktatás</span></td>
+            <td>2011. évi CCVI. tv.</td>
+            <td>2012 óta</td>
+            <td>VII. cikk</td>
+          </tr>
+          <!-- Egyéb -->
+          <tr class="sarkalatos-row" data-name="helyi önkormányzatok" data-cat="egyéb" data-year="2012" data-law="2011. évi CLXXXIX. tv.">
+            <td>Magyarország helyi önkormányzatairól</td>
+            <td><span class="cat-chip">Egyéb</span></td>
+            <td>2011. évi CLXXXIX. tv.</td>
+            <td>2012 óta</td>
+            <td>31–35. cikk</td>
+          </tr>
+          <tr class="sarkalatos-row" data-name="magyar nemzeti bank jegybank mnb" data-cat="egyéb" data-year="2013" data-law="2013. évi CXXXIX. tv.">
+            <td>A Magyar Nemzeti Bankról (MNB)</td>
+            <td><span class="cat-chip">Egyéb</span></td>
+            <td>2013. évi CXXXIX. tv.</td>
+            <td>2013 óta</td>
+            <td>41–42. cikk</td>
+          </tr>
+          <tr class="sarkalatos-row" data-name="honvédelem honvédség" data-cat="egyéb" data-year="2012" data-law="2011. évi CXIII. tv.">
+            <td>A honvédelemről és a Magyar Honvédségről</td>
+            <td><span class="cat-chip">Egyéb</span></td>
+            <td>2011. évi CXIII. tv.</td>
+            <td>2012 óta</td>
+            <td>45. cikk</td>
+          </tr>
+          <tr class="sarkalatos-row" data-name="rendőrség rendészet" data-cat="egyéb" data-year="2012" data-law="1994. évi XXXIV. tv.">
+            <td>A rendőrségről (sarkalatos rendelkezések)</td>
+            <td><span class="cat-chip">Egyéb</span></td>
+            <td>1994. évi XXXIV. tv.</td>
+            <td>2012 óta</td>
+            <td>46. cikk</td>
+          </tr>
+          <tr class="sarkalatos-row" data-name="országgyűlés parlamenti" data-cat="egyéb" data-year="2012" data-law="2012. évi XXXVI. tv.">
+            <td>Az Országgyűlésről (Ogytv.)</td>
+            <td><span class="cat-chip">Egyéb</span></td>
+            <td>2012. évi XXXVI. tv.</td>
+            <td>2012 óta</td>
+            <td>5. cikk</td>
+          </tr>
+          <tr class="sarkalatos-row" data-name="állampolgárság magyar" data-cat="egyéb" data-year="2012" data-law="1993. évi LV. tv.">
+            <td>Magyar állampolgárságról (sarkalatos rendelkezések)</td>
+            <td><span class="cat-chip">Egyéb</span></td>
+            <td>1993. évi LV. tv.</td>
+            <td>2012 óta</td>
+            <td>G) cikk</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="table-footer">
+        <span id="sarkalatos-count">19</span> törvény megjelenítve · A lista tájékoztató jellegű, nem teljes körű.
+      </div>
+    </div>
+
+    <div class="key-note" data-reveal>
+      <strong>Miért fontos ez?</strong> A sarkalatos törvények jelenlévő kétharmadot igénylő szabálya azt jelenti, hogy a Fidesznek csupán 33-34 fős frakciófegyelem elegendő blokkoláshoz – feltéve hogy nem minden képviselő van jelen. A teljes körű zároláshoz összesen 67 főre van szükség (összes képviselő 1/3+1).
+    </div>
+
+  </section><!-- /section-3 -->
+
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 4 — Intézményi időbomba
+       ════════════════════════════════════════════════════════ -->
+  <section class="section" id="section-4">
+
+    <div class="section-intro" data-reveal>
+      <div class="section-label">
+        <span class="section-num">4</span>
+        Intézményi időbomba
+      </div>
+      <h2 class="section-title">Ki mikor megy el<br><em>természetes úton?</em></h2>
+      <p class="section-desc">Kik ülnek most kulcspozícióban, és mikor jár le a mandátumuk? Az időbomba megmutatja, melyik forgatókönyvben mikor nyílnak természetes cserelehetőségek — akár 2/3 nélkül is.</p>
+    </div>
+
+    <div class="gantt-wrapper" data-reveal>
+      <div class="gantt-header">
+        <div class="gantt-legend-item">
+          <div class="gantt-legend-dot" style="background:#1A7A52;"></div>
+          2026-ban lejár
+        </div>
+        <div class="gantt-legend-item">
+          <div class="gantt-legend-dot" style="background:#EF9F27;"></div>
+          2026–2030 közt lejár
+        </div>
+        <div class="gantt-legend-item">
+          <div class="gantt-legend-dot" style="background:#C03030;"></div>
+          2030 után jár le
+        </div>
+        <div class="gantt-legend-item">
+          <div class="gantt-legend-dot" style="background:#B4B2A9;"></div>
+          Lejárt / kérdéses
+        </div>
+      </div>
+
+      <div class="gantt-scroll">
+        <div class="gantt-inner">
+          <!-- Year axis -->
+          <div class="gantt-year-row">
+            <div class="gantt-year-labels" style="position:relative;">
+              <span class="gantt-highlight-label" style="left:calc(200px + (2026 - 2023) / 13 * 100%);transform:none;">← 2026–2030 ciklus →</span>
+            </div>
+            <div class="gantt-year-axis" id="gantt-axis"></div>
+          </div>
+          <!-- Rows rendered by JS -->
+          <div id="gantt-rows"></div>
+        </div>
+      </div>
+
+      <div class="gantt-disclaimer">
+        ⚠ A mandátumok kezdetei és vége közelítő, tájékoztató adatok — sajtóhírek és nyilvános dokumentumok alapján. A tényleges dátumokért az eredeti kinevezési határozatokat érdemes ellenőrizni. Húzd fölé az egeret a részletekért.
+      </div>
+    </div>
+
+    <div class="key-note" data-reveal style="margin-top:16px;">
+      <strong>Következtetés:</strong> A 2026–2030-es ciklusban természetes úton (2/3 nélkül) <strong>nem</strong> cserélhető le a Kúria elnöke, az ÁSZ elnöke és az AB-tagok többsége. A legfőbb ügyész és az OBH elnöke 2029-ben <em>megújítható</em> — de ha a jelölést a Tisza indítja, ahhoz a 2/3-os szavazat már szükséges.
+    </div>
+
+  </section><!-- /section-4 -->
+
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 5 — Forgatókönyv-mátrix
+       ════════════════════════════════════════════════════════ -->
+  <section class="section" id="section-5">
+
+    <div class="section-intro" data-reveal>
+      <div class="section-label">
+        <span class="section-num">5</span>
+        Forgatókönyvek összehasonlítása
+      </div>
+      <h2 class="section-title">Melyik forgatókönyvben<br><em>mit tud a Tisza?</em></h2>
+      <p class="section-desc">Az A–D forgatókönyvek egymás melletti összehasonlítása: ki tud alkotmányt módosítani, sarkalatos törvényt megváltoztatni, ügyészt leváltani, médiatanácsot cserélni — igen, nem, vagy csak részben.</p>
+    </div>
+
+    <div class="matrix-wrap" data-reveal>
+      <table class="matrix-table" aria-label="Forgatókönyvek összehasonlítása">
+        <thead>
+          <tr>
+            <th>Hatáskör / döntés</th>
+            <th>
+              <div class="matrix-th-badge">
+                <span class="matrix-th-letter" style="color:var(--tisza)">A</span>
+                <span class="matrix-th-name">Tisza egyszerű<br>többség</span>
+              </div>
+            </th>
+            <th>
+              <div class="matrix-th-badge">
+                <span class="matrix-th-letter" style="color:var(--green)">B</span>
+                <span class="matrix-th-name">Tisza<br>2/3</span>
+              </div>
+            </th>
+            <th>
+              <div class="matrix-th-badge">
+                <span class="matrix-th-letter" style="color:var(--fidesz)">C</span>
+                <span class="matrix-th-name">MH+Fidesz<br>koalíció</span>
+              </div>
+            </th>
+            <th>
+              <div class="matrix-th-badge">
+                <span class="matrix-th-letter" style="color:var(--purple)">D</span>
+                <span class="matrix-th-name">MH+Tisza<br>koalíció</span>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="matrix-group-header"><td colspan="5">Alkotmányos döntések (2/3 összes kép.)</td></tr>
+          <tr>
+            <td>Alaptörvény módosítása</td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Köztársasági elnök megválasztása</td>
+            <td><span class="cell-partial">~</span><span class="cell-partial-text">2. fordulóban egyszerű</span></td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-partial">~</span><span class="cell-partial-text">ha MH is szavaz</span></td>
+          </tr>
+          <tr>
+            <td>Alkotmánybíró megválasztása</td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Legfőbb ügyész megválasztása</td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>OBH elnöke / Kúria elnöke csere</td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-no">✗</span></td>
+          </tr>
+
+          <tr class="matrix-group-header"><td colspan="5">Sarkalatos törvények (2/3 jelenlévő)</td></tr>
+          <tr>
+            <td>Választási rendszer megváltoztatása</td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Bírói szervezeti törvény módosítása</td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Médiatörvény módosítása</td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Médiatanács cseréje (hat.)</td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-no">✗</span></td>
+          </tr>
+
+          <tr class="matrix-group-header"><td colspan="5">Egyszerű törvényhozás (50%+ összes)</td></tr>
+          <tr>
+            <td>Miniszterelnök megválasztása</td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>Éves költségvetés elfogadása</td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-partial">~</span><span class="cell-partial-text">kockázatos szavazás</span></td>
+            <td><span class="cell-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>Egyszerű törvények módosítása</td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-partial">~</span><span class="cell-partial-text">bizonytalan egyensúly</span></td>
+            <td><span class="cell-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>Konstruktív bizalmatlansági ind. ellen védekezés</td>
+            <td><span class="cell-partial">~</span><span class="cell-partial-text">törékeny többség</span></td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-no">✗</span><span class="cell-no-text">aktív fenyegetés</span></td>
+            <td><span class="cell-yes">✓</span></td>
+          </tr>
+
+          <tr class="matrix-group-header"><td colspan="5">Összértékelés</td></tr>
+          <tr>
+            <td>Strukturális reform lehetséges?</td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Stabilan kormányozható 4 évig?</td>
+            <td><span class="cell-partial">~</span></td>
+            <td><span class="cell-yes">✓</span></td>
+            <td><span class="cell-no">✗</span></td>
+            <td><span class="cell-yes">✓</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="matrix-legend">
+        <div class="matrix-legend-item"><span class="cell-yes" style="font-size:13px;">✓</span> Igen / lehetséges</div>
+        <div class="matrix-legend-item"><span class="cell-no" style="font-size:13px;">✗</span> Nem / lehetetlen</div>
+        <div class="matrix-legend-item"><span class="cell-partial" style="font-size:12px;">~</span> Részben / feltételekkel</div>
+      </div>
+    </div>
+
+  </section><!-- /section-5 -->
+
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 6 — Konstruktív bizalmatlansági indítvány
+       ════════════════════════════════════════════════════════ -->
+  <section class="section" id="section-6">
+
+    <div class="section-intro" data-reveal>
+      <div class="section-label">
+        <span class="section-num">6</span>
+        Konstruktív bizalmatlansági indítvány
+      </div>
+      <h2 class="section-title">Hogyan lehet<br><em>leváltani a kormányt?</em></h2>
+      <p class="section-desc">A konstruktív bizalmatlansági indítvány az egyetlen alkotmányos módszer arra, hogy a parlamenti ciklus közben miniszterelnököt váltsanak. Magyarország Alaptörvénye szerint az indítvány csak akkor fogadható el, ha egyidejűleg új miniszterelnököt is választanak.</p>
+    </div>
+
+    <div class="flow-highlight-box" data-reveal>
+      <div class="flow-highlight-title">Kulcsszámok</div>
+      <div class="flow-key-numbers">
+        <div class="flow-key-num">
+          <div class="flow-key-big">50</div>
+          <div class="flow-key-label">Képviselő kell<br>az indítványhoz (1/5)</div>
+        </div>
+        <div class="flow-key-num">
+          <div class="flow-key-big">100</div>
+          <div class="flow-key-label">Igen szavazat<br>az elfogadáshoz</div>
+        </div>
+        <div class="flow-key-num">
+          <div class="flow-key-big">3</div>
+          <div class="flow-key-label">Nap várakozás<br>(kötelező)</div>
+        </div>
+        <div class="flow-key-num">
+          <div class="flow-key-big">1 év</div>
+          <div class="flow-key-label">Várakozás<br>sikertelen után</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flowchart">
+
+      <div class="flow-step">
+        <div class="flow-step-connector">
+          <div class="flow-step-num">1</div>
+          <div class="flow-step-line"></div>
+        </div>
+        <div class="flow-step-body">
+          <span class="flow-step-badge" style="background:var(--tisza-l);color:var(--tisza);">Benyújtás</span>
+          <div class="flow-step-title">Legalább 50 képviselő (1/5) írásos indítványt nyújt be</div>
+          <div class="flow-step-desc">Az indítványban kötelezően meg kell jelölni az új miniszterelnök-jelöltet. A leváltandó és az új jelölt neve egy időben szerepel a szavazólapon. Ezt <strong>konstruktívnak</strong> nevezi az Alaptörvény: nem elegendő az elmozdítás önmagában, az utódot is meg kell nevezni.</div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-connector">
+          <div class="flow-step-num">2</div>
+          <div class="flow-step-line"></div>
+        </div>
+        <div class="flow-step-body">
+          <span class="flow-step-badge" style="background:var(--mihaz-l);color:var(--mihaz);">Kötelező várakozás</span>
+          <div class="flow-step-title">3 napos türelmi idő — halasztás nem lehetséges</div>
+          <div class="flow-step-desc">Az indítvány benyújtásától számítva legalább 3 napnak el kell telnie a szavazásig. Ez idő alatt nincs lehetőség az ülés elhalasztására vagy a szavazás megakadályozására. A türelmi idő arra való, hogy a képviselők megfontolhassák döntésüket.</div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-connector">
+          <div class="flow-step-num">3</div>
+          <div class="flow-step-line"></div>
+        </div>
+        <div class="flow-step-body">
+          <span class="flow-step-badge" style="background:var(--accent-l);color:var(--accent);">Szavazás</span>
+          <div class="flow-step-title">Nyílt szavazás — minden képviselő szavaz</div>
+          <div class="flow-step-desc">A szavazás a 199 képviselő névszerinti, nyílt szavazásával zajlik. A tartózkodás és a távolmaradás a nem szavazatával egyenértékű.</div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-connector">
+          <div class="flow-step-num">4</div>
+          <div class="flow-step-line"></div>
+        </div>
+        <div class="flow-step-body">
+          <span class="flow-step-badge" style="background:var(--purple-l);color:var(--purple);">Küszöb</span>
+          <div class="flow-step-title">Szükséges: 100 igen szavazat (199/2+1)</div>
+          <div class="flow-step-desc">Az Alaptörvény 21. cikk (2)–(3) bekezdése szerint az indítvány elfogadásához az összes képviselő több mint felének — tehát legalább 100 főnek — igennel kell szavaznia. Ehhez nincs szükség kétharmadra.</div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-connector">
+          <div class="flow-step-num">5</div>
+          <!-- no line on last -->
+        </div>
+        <div class="flow-step-body">
+          <span class="flow-step-badge" style="background:var(--ink);color:var(--bg);">Kimenetel</span>
+          <div class="flow-step-title">Két lehetséges végeredmény</div>
+          <div class="flow-split">
+            <div class="flow-outcome flow-outcome-yes">
+              <div class="flow-outcome-title">Sikeres (100+ igen)</div>
+              <p>A régi miniszterelnök megbízatása <strong>azonnal megszűnik</strong>. Az új miniszterelnök <strong>azonnal hivatalba lép</strong>. A kormányváltás a ciklus közben történik — az Országgyűlés összetétele változatlan marad.</p>
+            </div>
+            <div class="flow-outcome flow-outcome-no">
+              <div class="flow-outcome-title">Sikertelen (99 vagy kevesebb)</div>
+              <p>Az indítvány megbukik. <strong>1 éven belül nem nyújtható be</strong> újabb konstruktív bizalmatlansági indítvány. A mindenkori miniszterelnök a ciklusban marad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /flowchart -->
+
+    <div class="key-note" data-reveal>
+      <strong>Politikai összefüggés (C forgatókönyv):</strong> Ha a Fidesz és a Mi Hazánk összefog és közösen 100+ szavazatot tudnak összeszedni <em>Tisza-pártiakkal együtt</em>, akkor ciklus közben is leválthatják a Tisza-kormányt. Ez a C forgatókönyv legfőbb veszélye — és magyarázza, miért kulcsfontosságú a frakciófegyelem.
+    </div>
+
+  </section><!-- /section-6 -->
+
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 7 — EU / Nemzetközi korlátok
+       ════════════════════════════════════════════════════════ -->
+  <section class="section" id="section-7">
+
+    <div class="section-intro" data-reveal>
+      <div class="section-label">
+        <span class="section-num">7</span>
+        EU és nemzetközi korlátok
+      </div>
+      <h2 class="section-title">Amit még<br><em>kétharmaddal sem lehet megtenni</em></h2>
+      <p class="section-desc">Egy Tisza-vezette kormánynak — akár 2/3-os többséggel is — számos olyan jogi, politikai és pénzügyi korláttal kell szembenéznie, amely Brüsszelből, Strasbourgból vagy a Velencei Bizottságtól érkezik.</p>
+    </div>
+
+    <div class="eu-grid">
+
+      <div class="eu-card" data-reveal data-reveal-delay="1">
+        <div class="eu-card-icon" style="background:#EEF4FF;">🇪🇺</div>
+        <div class="eu-card-org" style="color:var(--tisza);">EU Alapjogi Charta</div>
+        <div class="eu-card-title">Alapjogok kötelező érvényesítése</div>
+        <div class="eu-card-desc">Az EU tagállamai kötelesek az Alapjogi Chartát alkalmazni uniós jog végrehajtásakor. Az EU Bírósága kikényszerítheti, napi bírsággal is.</div>
+        <span class="eu-card-strength strength-hard">● Kötelező</span>
+      </div>
+
+      <div class="eu-card" data-reveal data-reveal-delay="2">
+        <div class="eu-card-icon" style="background:#FFF4F0;">⚖️</div>
+        <div class="eu-card-org" style="color:var(--accent);">EU Bíróság (EUB)</div>
+        <div class="eu-card-title">Kötelezettségszegési ítéletek végrehajtása</div>
+        <div class="eu-card-desc">Magyarország ellen számos ítélet született (bírói függetlenség, adatvédelem, menekültjog). Ezek végrehajtása kötelező — napi bírság, kifizetés megtagadása.</div>
+        <span class="eu-card-strength strength-hard">● Kötelező</span>
+      </div>
+
+      <div class="eu-card" data-reveal data-reveal-delay="3">
+        <div class="eu-card-icon" style="background:#F0FFF4;">💰</div>
+        <div class="eu-card-org" style="color:var(--green);">EU Feltételességi rendelet</div>
+        <div class="eu-card-title">Jogállamisághoz kötött EU-s pénzek</div>
+        <div class="eu-card-desc">Az EU cohéziós és helyreállítási forrásait jogállamisági feltételekhez kötik. Ha egy kormány visszacsúszik, a pénzek ismét befagyaszthatók.</div>
+        <span class="eu-card-strength strength-hard">● Kötelező</span>
+      </div>
+
+      <div class="eu-card" data-reveal data-reveal-delay="1">
+        <div class="eu-card-icon" style="background:#FFF8E6;">🏛️</div>
+        <div class="eu-card-org" style="color:var(--mihaz);">EJEB / Strasbourg</div>
+        <div class="eu-card-title">Emberi Jogok Európai Bírósága</div>
+        <div class="eu-card-desc">Az Emberi Jogok Európai Egyezménye alapján Magyarország kötelezett az EJEB ítéleteinek végrehajtására. Ellenszegülés politikai és jogi következményekkel jár.</div>
+        <span class="eu-card-strength strength-hard">● Kötelező</span>
+      </div>
+
+      <div class="eu-card" data-reveal data-reveal-delay="2">
+        <div class="eu-card-icon" style="background:#F5F0FF;">📋</div>
+        <div class="eu-card-org" style="color:var(--purple);">Velencei Bizottság</div>
+        <div class="eu-card-title">Alkotmányos reform szabványai</div>
+        <div class="eu-card-desc">Az Európa Tanács Velencei Bizottságának ajánlásai technikailag nem kötelezők, de politikailag erős nyomást gyakorolnak — különösen EU-s pénzügyi feltételességgel kombinálva.</div>
+        <span class="eu-card-strength strength-soft">● Politikai nyomás</span>
+      </div>
+
+      <div class="eu-card" data-reveal data-reveal-delay="3">
+        <div class="eu-card-icon" style="background:#F0F9FF;">🛡️</div>
+        <div class="eu-card-org" style="color:var(--tisza);">NATO elvárások</div>
+        <div class="eu-card-title">Védelmi kiadások és együttműködés</div>
+        <div class="eu-card-desc">A NATO 2% GDP védelmi elvárása kötelező politikai kötelezettség. Az erre vonatkozó döntések alkotmányos és szövetségi kereteken belül maradnak.</div>
+        <span class="eu-card-strength strength-medium">● Politikai kötelezettség</span>
+      </div>
+
+      <div class="eu-card" data-reveal data-reveal-delay="1">
+        <div class="eu-card-icon" style="background:#FFF5F5;">📊</div>
+        <div class="eu-card-org" style="color:var(--fidesz);">Alaptörvény 36–37. cikk</div>
+        <div class="eu-card-title">Hazai adósságkorlát és EU-s fiskális szabályok</div>
+        <div class="eu-card-desc">Az Alaptörvény tiltja, hogy az államadósság GDP-arányos mértéke növekedjen, ha az meghaladja az 50%-ot. Az EU Stabilitási és Növekedési Paktuma tovább korlátozza a fiskális mozgásteret.</div>
+        <span class="eu-card-strength strength-hard">● Kötelező</span>
+      </div>
+
+      <div class="eu-card" data-reveal data-reveal-delay="2">
+        <div class="eu-card-icon" style="background:#F0FFF8;">🌐</div>
+        <div class="eu-card-org" style="color:var(--green);">WTO / Kereskedelmi jog</div>
+        <div class="eu-card-title">Gazdasági és kereskedelmi kötelezettségek</div>
+        <div class="eu-card-desc">WTO-tagságból és EU egységes piaci részvételből fakadó kötelezettségek: állami támogatási szabályok, közbeszerzési irányelvek, versenyfelügyelet.</div>
+        <span class="eu-card-strength strength-medium">● Jogi kötelezettség</span>
+      </div>
+
+    </div><!-- /eu-grid -->
+
+    <div class="eu-summary-box" data-reveal>
+      <div class="eu-summary-title">Mit nem tehet meg még egy kétharmados Tisza sem?</div>
+      <ul class="eu-summary-list">
+        <li>Kilépni az EU-ból egyoldalúan (Alaptörvény E) cikke és EU-s szerződések megkövetelik a többi tagállam hozzájárulását)</li>
+        <li>Figyelmen kívül hagyni az EU Bíróságának jogerős ítéleteit — pénzügyi szankciók fenyegetnek</li>
+        <li>Az EU kohéziós és helyreállítási pénzeket a feltételességi rendelet elvárásai ellenére felhasználni</li>
+        <li>Az Emberi Jogok Európai Egyezményét az EJEB ítéletek ellenére megszegni — politikai és jogi elszigetelődés kockázata</li>
+        <li>Az adósságkorlátot átlépni anélkül, hogy módosítanák az Alaptörvényt (ami szintén kétharmadot igényel)</li>
+        <li>A NATO-tagságból fakadó védelmi kötelezettségeket egyoldalúan felmondani</li>
+      </ul>
+    </div>
+
+  </section><!-- /section-7 -->
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-col-title">Forrás</div>
+        <p>Magyarország Alaptörvénye · <a href="https://www.parlament.hu" target="_blank" rel="noopener">parlament.hu</a> · Az Országgyűlésről szóló 2012. évi XXXVI. törvény · Házszabályi rendelkezések (10/2014. OGY határozat) · A médiaszolgáltatásokról szóló 2010. évi CLXXXV. törvény</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Jogi nyilatkozat</div>
+        <p>Az elemzés kizárólag tájékoztató jellegű. A mandátumszámok és az intézményi adatok közelítők, tényleges eredményektől eltérhetnek. Az anyag nem minősül jogi tanácsadásnak.</p>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /layout -->
+
+<script src="script.js"></script>
+</body>
+</html>
