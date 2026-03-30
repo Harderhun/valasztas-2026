@@ -360,10 +360,10 @@ window.showSc = function (n) {
     },
     {
       institution: 'Legfőbb ügyész',
-      person:      'Polt Péter',
-      start: 2020, end: 2029,
-      type: 'expires-during',
-      note: '2029-ben jár le — természetes megújítási lehetőség',
+      person:      'Nagy Gábor Bálint',
+      start: 2025, end: 2034,
+      type: 'expires-after',
+      note: '2025-ben választva (Polt Péter lemondása után) — 2034-ig aktív, a ciklus alatt nem jár le',
       vote: '2/3 összes képviselő'
     },
     {
@@ -376,18 +376,18 @@ window.showSc = function (n) {
     },
     {
       institution: 'Kúria elnöke',
-      person:      'Tóth Szabolcs',
-      start: 2023, end: 2032,
-      type: 'expires-after',
-      note: 'A teljes ciklus alatt aktív — csak 2/3-dal leváltható',
+      person:      'Varga Zs. András',
+      start: 2021, end: 2030,
+      type: 'expires-during',
+      note: '2030-ban jár le — a ciklus végén természetes cserealkalom',
       vote: '2/3 összes képviselő'
     },
     {
       institution: 'ÁSZ elnöke',
-      person:      'Domokos László',
+      person:      'Windisch László',
       start: 2022, end: 2034,
       type: 'expires-after',
-      note: '2022-ben újraválasztva — hosszú mandátum, blokkolja a cserét',
+      note: '2022-ben választva (Domokos László után) — 2034-ig aktív, blokkolja a cserét',
       vote: '2/3 összes képviselő'
     },
     {

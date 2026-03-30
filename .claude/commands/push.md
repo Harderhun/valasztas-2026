@@ -1,0 +1,1 @@
+Stage all files including untracked ones (git add -A), create a commit with a short message that summarizes the changes based on the diff, then push to origin main. Do not create a PR. Do not ask for confirmation.

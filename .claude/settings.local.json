@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "mcp__2fd9edbe-4fc5-4841-930e-fae8c9bb0993__get_authenticated_user",
+      "Bash(gh api:*)",
+      "mcp__github__create_repository",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(git remote:*)",
+      "WebSearch",
+      "Bash(git push:*)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/gyuri/SynologyDrive/code/www/valasztas-2026/valasztas-2026.png)"
+    ]
+  }
+}
