@@ -151,77 +151,17 @@
       <p class="section-desc">Az április 12-i választáson öt párt állít országos listát. A független kutatók TISZA-előnyt mérnek, a kormányközeli intézetek Fidesz-vezetést — a különbség módszertani, de jól jelzi a végeredmény bizonytalanságát.</p>
     </div>
 
-    <!-- Party cards -->
-    <div class="party-grid" data-reveal data-reveal-delay="1">
+    <!-- Party cards — JS tölti fel (PARTIES[] a script.js-ben) -->
+    <div id="party-grid" class="party-grid" data-reveal data-reveal-delay="1"></div>
 
-      <div class="party-card" style="--party-color:#2A6DB5">
-        <div class="party-card-abbr">TISZA</div>
-        <div class="party-card-name">Tisztelet és Szabadság Párt</div>
-        <div class="party-card-leader">Magyar Péter</div>
-        <div class="party-card-pct">47.8%</div>
-        <div class="party-card-pct-note">PolitPro átlag · márc. 30.</div>
-        <span class="party-card-threshold threshold-in">✓ Parlament</span>
-      </div>
-
-      <div class="party-card" style="--party-color:#C03030">
-        <div class="party-card-abbr">Fidesz–KDNP</div>
-        <div class="party-card-name">Fidesz – Magyar Polgári Szövetség</div>
-        <div class="party-card-leader">Orbán Viktor</div>
-        <div class="party-card-pct">40.5%</div>
-        <div class="party-card-pct-note">PolitPro átlag · márc. 30.</div>
-        <span class="party-card-threshold threshold-in">✓ Parlament</span>
-      </div>
-
-      <div class="party-card" style="--party-color:#C07020">
-        <div class="party-card-abbr">Mi Hazánk</div>
-        <div class="party-card-name">Mi Hazánk Mozgalom</div>
-        <div class="party-card-leader">Toroczkai László</div>
-        <div class="party-card-pct">5.7%</div>
-        <div class="party-card-pct-note">PolitPro átlag · márc. 30.</div>
-        <span class="party-card-threshold threshold-in">✓ Parlament</span>
-      </div>
-
-      <div class="party-card" style="--party-color:#8B1A4A">
-        <div class="party-card-abbr">DK</div>
-        <div class="party-card-name">Demokratikus Koalíció</div>
-        <div class="party-card-leader">Gyurcsány Ferenc</div>
-        <div class="party-card-pct">2.8%</div>
-        <div class="party-card-pct-note">PolitPro átlag · márc. 30.</div>
-        <span class="party-card-threshold threshold-edge">~ Küszöb alatt</span>
-      </div>
-
-      <div class="party-card" style="--party-color:#2B7A3B">
-        <div class="party-card-abbr">MKKP</div>
-        <div class="party-card-name">Magyar Kétfarkú Kutya Párt</div>
-        <div class="party-card-leader">Kovács Gergő</div>
-        <div class="party-card-pct">2.8%</div>
-        <div class="party-card-pct-note">PolitPro átlag · márc. 30.</div>
-        <span class="party-card-threshold threshold-edge">~ Küszöb alatt</span>
-      </div>
-
-    </div>
-
-    <!-- Aggregate bar -->
+    <!-- Aggregate bar — JS tölti fel -->
     <div class="poll-agg-wrap" data-reveal data-reveal-delay="2">
       <div class="poll-agg-label">Aggregált átlag — biztos szavazók körében (PolitPro, 2026. márc. 30.)</div>
-      <div class="poll-agg-bar">
-        <div class="poll-agg-seg" style="width:47.8%;background:#2A6DB5" title="TISZA 47.8%">TISZA 47.8%</div>
-        <div class="poll-agg-seg" style="width:40.5%;background:#C03030" title="Fidesz–KDNP 40.5%">Fidesz 40.5%</div>
-        <div class="poll-agg-seg" style="width:5.7%;background:#C07020" title="Mi Hazánk 5.7%"></div>
-        <div class="poll-agg-seg" style="width:2.8%;background:#8B1A4A" title="DK 2.8%"></div>
-        <div class="poll-agg-seg" style="width:2.8%;background:#2B7A3B" title="MKKP 2.8%"></div>
-        <div class="poll-agg-seg" style="width:0.4%;background:#B4B2A9" title="Egyéb 0.4%"></div>
-      </div>
-      <div class="poll-agg-legend">
-        <div class="poll-agg-legend-item"><div class="poll-agg-legend-dot" style="background:#2A6DB5"></div>TISZA</div>
-        <div class="poll-agg-legend-item"><div class="poll-agg-legend-dot" style="background:#C03030"></div>Fidesz–KDNP</div>
-        <div class="poll-agg-legend-item"><div class="poll-agg-legend-dot" style="background:#C07020"></div>Mi Hazánk</div>
-        <div class="poll-agg-legend-item"><div class="poll-agg-legend-dot" style="background:#8B1A4A"></div>DK</div>
-        <div class="poll-agg-legend-item"><div class="poll-agg-legend-dot" style="background:#2B7A3B"></div>MKKP</div>
-      </div>
+      <div id="poll-agg-bar" class="poll-agg-bar"></div>
+      <div id="poll-agg-legend" class="poll-agg-legend"></div>
     </div>
 
-    <!-- Poll comparison table -->
+    <!-- Poll comparison table — JS tölti fel (POLLS[] a script.js-ben) -->
     <div class="poll-compare-wrap" data-reveal data-reveal-delay="3">
       <table class="poll-compare-table">
         <thead>
@@ -234,44 +174,7 @@
             <th style="color:#2B7A3B">MKKP</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>
-              <span class="poll-inst-name">Republikon</span>
-              <span class="poll-inst-date">2026. márc. 23–26.</span>
-              <span class="poll-inst-tag poll-tag-independent">Független</span>
-            </td>
-            <td><span class="poll-pct poll-pct-tisza">49%</span></td>
-            <td><span class="poll-pct poll-pct-fidesz">40%</span></td>
-            <td><span class="poll-pct poll-pct-mh">5%</span></td>
-            <td><span class="poll-pct poll-pct-dk">2%</span></td>
-            <td><span class="poll-pct poll-pct-mkkp">4%</span></td>
-          </tr>
-          <tr>
-            <td>
-              <span class="poll-inst-name">Medián</span>
-              <span class="poll-inst-date">2026. márc. 17–20.</span>
-              <span class="poll-inst-tag poll-tag-independent">Független</span>
-            </td>
-            <td><span class="poll-pct poll-pct-tisza">58%</span></td>
-            <td><span class="poll-pct poll-pct-fidesz">35%</span></td>
-            <td><span class="poll-pct poll-pct-mh">4%</span></td>
-            <td><span class="poll-pct poll-pct-dk">1%</span></td>
-            <td><span class="poll-pct poll-pct-mkkp">2%</span></td>
-          </tr>
-          <tr>
-            <td>
-              <span class="poll-inst-name">Nézőpont</span>
-              <span class="poll-inst-date">2026. márc. 17.</span>
-              <span class="poll-inst-tag poll-tag-gov">Kormányközeli</span>
-            </td>
-            <td><span class="poll-pct poll-pct-tisza">40%</span></td>
-            <td><span class="poll-pct poll-pct-fidesz">46%</span></td>
-            <td><span class="poll-pct poll-pct-mh">8%</span></td>
-            <td><span class="poll-pct poll-pct-dk">3%</span></td>
-            <td><span class="poll-pct poll-pct-mkkp">3%</span></td>
-          </tr>
-        </tbody>
+        <tbody id="poll-table-body"></tbody>
       </table>
     </div>
 

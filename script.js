@@ -4,6 +4,77 @@
 
 'use strict';
 
+/* ── SECTION 0 adatok — itt frissítsd a számokat ─────────────
+   Utolsó frissítés: 2026. március 30.
+   ──────────────────────────────────────────────────────────── */
+
+const POLL_DATE = '2026. március 30.';
+
+const PARTIES = [
+  {
+    abbr:      'TISZA',
+    name:      'Tisztelet és Szabadság Párt',
+    leader:    'Magyar Péter',
+    color:     '#2A6DB5',
+    pct:       47.8,
+    threshold: 'in',   // 'in' | 'edge' | 'out'
+  },
+  {
+    abbr:      'Fidesz–KDNP',
+    name:      'Fidesz – Magyar Polgári Szövetség',
+    leader:    'Orbán Viktor',
+    color:     '#C03030',
+    pct:       40.5,
+    threshold: 'in',
+  },
+  {
+    abbr:      'Mi Hazánk',
+    name:      'Mi Hazánk Mozgalom',
+    leader:    'Toroczkai László',
+    color:     '#C07020',
+    pct:       5.7,
+    threshold: 'in',
+  },
+  {
+    abbr:      'DK',
+    name:      'Demokratikus Koalíció',
+    leader:    'Gyurcsány Ferenc',
+    color:     '#8B1A4A',
+    pct:       2.8,
+    threshold: 'edge',
+  },
+  {
+    abbr:      'MKKP',
+    name:      'Magyar Kétfarkú Kutya Párt',
+    leader:    'Kovács Gergő',
+    color:     '#2B7A3B',
+    pct:       2.8,
+    threshold: 'edge',
+  },
+];
+
+// Közvélemény-kutatások — legfrissebb elérhető mérés intézetenként
+const POLLS = [
+  {
+    inst:    'Republikon',
+    date:    '2026. márc. 23–26.',
+    type:    'independent',   // 'independent' | 'gov'
+    results: { TISZA: 49, Fidesz: 40, MiHazank: 5, DK: 2, MKKP: 4 },
+  },
+  {
+    inst:    'Medián',
+    date:    '2026. márc. 17–20.',
+    type:    'independent',
+    results: { TISZA: 58, Fidesz: 35, MiHazank: 4, DK: 1, MKKP: 2 },
+  },
+  {
+    inst:    'Nézőpont',
+    date:    '2026. márc. 17.',
+    type:    'gov',
+    results: { TISZA: 40, Fidesz: 46, MiHazank: 8, DK: 3, MKKP: 3 },
+  },
+];
+
 /* ── Scroll progress bar ────────────────────────────────────── */
 (function () {
   const bar = document.getElementById('scroll-progress');
@@ -205,6 +276,69 @@ window.showSc = function (n) {
 
   // Init count
   if (countEl) countEl.textContent = rows.length;
+})();
+
+/* ── Section 0: pártok és közvélemény-kutatások (generált) ─── */
+(function () {
+  const THRESHOLD_LABELS = {
+    in:   { cls: 'threshold-in',   text: '✓ Parlament' },
+    edge: { cls: 'threshold-edge', text: '~ Küszöb alatt' },
+    out:  { cls: 'threshold-out',  text: '✗ Küszöb alatt' },
+  };
+
+  // Party cards
+  const grid = document.getElementById('party-grid');
+  if (grid) {
+    grid.innerHTML = PARTIES.map(p => `
+      <div class="party-card" style="--party-color:${p.color}">
+        <div class="party-card-abbr">${p.abbr}</div>
+        <div class="party-card-name">${p.name}</div>
+        <div class="party-card-leader">${p.leader}</div>
+        <div class="party-card-pct">${p.pct}%</div>
+        <div class="party-card-pct-note">PolitPro átlag · ${POLL_DATE}</div>
+        <span class="party-card-threshold ${THRESHOLD_LABELS[p.threshold].cls}">${THRESHOLD_LABELS[p.threshold].text}</span>
+      </div>`).join('');
+  }
+
+  // Aggregate bar
+  const aggBar = document.getElementById('poll-agg-bar');
+  if (aggBar) {
+    const total = PARTIES.reduce((s, p) => s + p.pct, 0);
+    const other = Math.max(0, +(100 - total).toFixed(1));
+    aggBar.innerHTML = PARTIES.map(p =>
+      `<div class="poll-agg-seg" style="width:${p.pct}%;background:${p.color}" title="${p.abbr} ${p.pct}%">${p.pct >= 8 ? p.abbr + ' ' + p.pct + '%' : ''}</div>`
+    ).join('') + (other > 0 ? `<div class="poll-agg-seg" style="width:${other}%;background:#B4B2A9" title="Egyéb ${other}%"></div>` : '');
+  }
+
+  // Aggregate legend
+  const aggLegend = document.getElementById('poll-agg-legend');
+  if (aggLegend) {
+    aggLegend.innerHTML = PARTIES.map(p =>
+      `<div class="poll-agg-legend-item"><div class="poll-agg-legend-dot" style="background:${p.color}"></div>${p.abbr}</div>`
+    ).join('');
+  }
+
+  // Poll comparison table body
+  const pollBody = document.getElementById('poll-table-body');
+  if (pollBody) {
+    pollBody.innerHTML = POLLS.map(poll => {
+      const r = poll.results;
+      const tagCls  = poll.type === 'gov' ? 'poll-tag-gov' : 'poll-tag-independent';
+      const tagText = poll.type === 'gov' ? 'Kormányközeli' : 'Független';
+      return `<tr>
+        <td>
+          <span class="poll-inst-name">${poll.inst}</span>
+          <span class="poll-inst-date">${poll.date}</span>
+          <span class="poll-inst-tag ${tagCls}">${tagText}</span>
+        </td>
+        <td><span class="poll-pct poll-pct-tisza">${r.TISZA}%</span></td>
+        <td><span class="poll-pct poll-pct-fidesz">${r.Fidesz}%</span></td>
+        <td><span class="poll-pct poll-pct-mh">${r.MiHazank}%</span></td>
+        <td><span class="poll-pct poll-pct-dk">${r.DK}%</span></td>
+        <td><span class="poll-pct poll-pct-mkkp">${r.MKKP}%</span></td>
+      </tr>`;
+    }).join('');
+  }
 })();
 
 /* ── Gantt chart ────────────────────────────────────────────── */
