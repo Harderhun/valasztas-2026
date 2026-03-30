@@ -369,9 +369,9 @@ window.showSc = function (n) {
     {
       institution: 'OBH elnöke',
       person:      'Senyei György',
-      start: 2020, end: 2029,
+      start: 2019, end: 2028,
       type: 'expires-during',
-      note: '2029-ben jár le — természetes megújítási lehetőség',
+      note: '2019. dec. 10-én választva — mandátum 2028. dec. 10-én jár le, a ciklus alatt természetes csere',
       vote: '2/3 összes képviselő'
     },
     {
@@ -401,25 +401,25 @@ window.showSc = function (n) {
     {
       institution: 'AB-tag (Handó T.)',
       person:      'Handó Tünde',
-      start: 2018, end: 2030,
-      type: 'expires-during',
-      note: '2030-ban lejár — a ciklus végén természetes csere',
+      start: 2020, end: 2032,
+      type: 'expires-after',
+      note: '2019. nov. 4-én választva, 2020. jan. 1-jén lépett hivatalba — mandátum ~2032 elejéig tart',
       vote: '2/3 összes képviselő'
     },
     {
       institution: 'AB-tag (Horváth A.)',
       person:      'Horváth Attila',
-      start: 2018, end: 2030,
+      start: 2016, end: 2028,
       type: 'expires-during',
-      note: '2030-ban lejár — a ciklus végén természetes csere',
+      note: '2016. nov. 22-én választva, 2016. dec. 1-jén lépett hivatalba — mandátum 2028. dec. 1-jén jár le',
       vote: '2/3 összes képviselő'
     },
     {
       institution: 'AB-tag (Schanda B.)',
       person:      'Schanda Balázs',
-      start: 2019, end: 2031,
-      type: 'expires-after',
-      note: '2031-ben jár le — az új ciklus elején természetes csere',
+      start: 2016, end: 2028,
+      type: 'expires-during',
+      note: '2016. nov. 22-én választva, 2016. dec. 1-jén lépett hivatalba — mandátum 2028. dec. 1-jén jár le',
       vote: '2/3 összes képviselő'
     },
     {
