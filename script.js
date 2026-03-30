@@ -38,7 +38,7 @@ const PARTIES = [
   {
     abbr:      'DK',
     name:      'Demokratikus Koalíció',
-    leader:    'Gyurcsány Ferenc',
+    leader:    'Dobrev Klára',
     color:     '#8B1A4A',
     pct:       2.8,
     threshold: 'edge',
