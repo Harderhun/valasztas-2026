@@ -14,7 +14,18 @@
       "Bash(git push:*)",
       "Skill(update-config)",
       "Skill(update-config:*)",
-      "Bash(sips -g pixelWidth -g pixelHeight /Users/gyuri/SynologyDrive/code/www/valasztas-2026/valasztas-2026.png)"
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/gyuri/SynologyDrive/code/www/valasztas-2026/valasztas-2026.png)",
+      "Bash(curl -s \"https://net.jogtar.hu/jogszabaly?docid=a1400010.OGY\")",
+      "Bash(curl -s \"https://www.parlament.hu/irom41/01234/01234.pdf\" -o /tmp/hazszabaly.pdf)",
+      "Bash(echo \"exit: $?\")",
+      "WebFetch(domain:net.jogtar.hu)",
+      "WebFetch(domain:mkogy.jogtar.hu)",
+      "WebFetch(domain:infostart.hu)",
+      "WebFetch(domain:dfk-online.sze.hu)",
+      "WebFetch(domain:magyarnemzet.hu)",
+      "WebFetch(domain:www.parlament.hu)",
+      "WebFetch(domain:njt.hu)",
+      "WebFetch(domain:varosikurir.hu)"
     ]
   }
 }
