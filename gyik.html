@@ -37,6 +37,37 @@
   .label-tisza { display: inline-block; background: #2A6DB5; color: #fff; font-size: 0.75rem; padding: 2px 7px; border-radius: 3px; font-weight: 600; }
   .label-fidesz { display: inline-block; background: #C03030; color: #fff; font-size: 0.75rem; padding: 2px 7px; border-radius: 3px; font-weight: 600; }
   .label-draw { display: inline-block; background: #6B6A62; color: #fff; font-size: 0.75rem; padding: 2px 7px; border-radius: 3px; font-weight: 600; }
+
+  /* ── Mandátum-mérleg vizualizáció ── */
+  .seat-viz { margin: 20px 0 8px; }
+  .seat-viz-label { font-size: 0.8rem; color: #6B6A62; margin-bottom: 6px; }
+  .seat-bar-wrap { position: relative; height: 36px; background: #E8E4DC; border-radius: 6px; overflow: hidden; display: flex; }
+  .seat-seg { height: 100%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 600; color: #fff; transition: width 0.4s; min-width: 28px; }
+  .seat-seg.tisza { background: #2A6DB5; }
+  .seat-seg.fidesz { background: #C03030; }
+  .seat-seg.mh { background: #C07020; }
+  .seat-majority-line { position: absolute; left: calc(100 / 199 * 100%); top: -2px; bottom: -2px; width: 2px; background: #1A1915; z-index: 2; }
+  .seat-majority-label { position: absolute; left: calc(100 / 199 * 100%); top: -18px; transform: translateX(-50%); font-size: 0.7rem; color: #1A1915; font-weight: 600; white-space: nowrap; }
+  .seat-legend { display: flex; gap: 16px; margin-top: 6px; font-size: 0.78rem; color: #6B6A62; flex-wrap: wrap; }
+  .seat-legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
+
+  /* ── Zóna-sáv vizualizáció ── */
+  .zone-viz { margin: 20px 0 16px; }
+  .zone-strip { position: relative; display: flex; height: 44px; border-radius: 6px; overflow: visible; margin-top: 24px; margin-bottom: 28px; }
+  .zone-seg { display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 600; color: #fff; padding: 0 8px; }
+  .zone-seg.z-fidesz { background: linear-gradient(135deg, #C03030, #a02828); width: 30%; border-radius: 6px 0 0 6px; }
+  .zone-seg.z-draw { background: linear-gradient(135deg, #8B8880, #6B6A62); width: 20%; }
+  .zone-seg.z-tisza { background: linear-gradient(135deg, #2A6DB5, #1e5a96); width: 50%; border-radius: 0 6px 6px 0; }
+  .zone-tick { position: absolute; top: -18px; font-size: 0.7rem; color: #1A1915; font-weight: 600; transform: translateX(-50%); }
+  .zone-tick::after { content: ''; position: absolute; bottom: -6px; left: 50%; width: 1px; height: 6px; background: #1A1915; }
+  .zone-marker { position: absolute; bottom: -24px; transform: translateX(-50%); text-align: center; }
+  .zone-marker-arrow { font-size: 1rem; line-height: 1; color: #1A1915; }
+  .zone-marker-text { font-size: 0.68rem; font-weight: 600; color: #1A1915; white-space: nowrap; }
+  .zone-label-row { display: flex; font-size: 0.72rem; color: #6B6A62; }
+  .zone-label-row span { display: flex; align-items: center; justify-content: center; }
+  .zone-label-row .zl-fidesz { width: 30%; color: #C03030; font-weight: 600; }
+  .zone-label-row .zl-draw { width: 20%; color: #6B6A62; font-weight: 600; }
+  .zone-label-row .zl-tisza { width: 50%; color: #2A6DB5; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -73,8 +104,46 @@
   <li>A 2022-es Fidesz-győzelem 54%-os szavazataránnyal és <strong>87/106 körzeti győzelemmel</strong> jött össze. A jelenlegi 7+ pontos Tisza-előny mellett a Tisza nyerné a körzetek többségét.</li>
 </ul>
 
+<h3>Mandátum-mérleg</h3>
+
+<!-- C-forgatókönyv: Tisza 105 / Fidesz 70 / MH 24 -->
+<div class="seat-viz">
+  <div class="seat-viz-label">C-forgatókönyv (jelenlegi közvélemény-kutatások alapján)</div>
+  <div class="seat-bar-wrap">
+    <div class="seat-seg tisza" style="width:calc(105/199*100%)">105</div>
+    <div class="seat-seg fidesz" style="width:calc(70/199*100%)">70</div>
+    <div class="seat-seg mh" style="width:calc(24/199*100%)">24</div>
+    <span class="seat-majority-label">többség: 100</span>
+    <div class="seat-majority-line"></div>
+  </div>
+  <div class="seat-legend">
+    <span><span class="seat-legend-dot" style="background:#2A6DB5"></span>Tisza 105</span>
+    <span><span class="seat-legend-dot" style="background:#C03030"></span>Fidesz 70</span>
+    <span><span class="seat-legend-dot" style="background:#C07020"></span>Mi Hazánk 24</span>
+    <span style="margin-left:auto; font-weight:600;">F+MH együtt: 94 — nem elég</span>
+  </div>
+</div>
+
+<!-- Mi lenne ha szűkülne: Tisza 98 / Fidesz 78 / MH 23 -->
+<div class="seat-viz">
+  <div class="seat-viz-label">„Mi lenne, ha…" — Tisza 44%, Fidesz 42%, MH 7% (szűk rés)</div>
+  <div class="seat-bar-wrap">
+    <div class="seat-seg tisza" style="width:calc(98/199*100%)">98</div>
+    <div class="seat-seg fidesz" style="width:calc(78/199*100%)">78</div>
+    <div class="seat-seg mh" style="width:calc(23/199*100%)">23</div>
+    <span class="seat-majority-label">többség: 100</span>
+    <div class="seat-majority-line"></div>
+  </div>
+  <div class="seat-legend">
+    <span><span class="seat-legend-dot" style="background:#2A6DB5"></span>Tisza 98</span>
+    <span><span class="seat-legend-dot" style="background:#C03030"></span>Fidesz 78</span>
+    <span><span class="seat-legend-dot" style="background:#C07020"></span>Mi Hazánk 23</span>
+    <span style="margin-left:auto; font-weight:600; color:#C03030;">F+MH együtt: 101 — többség!</span>
+  </div>
+</div>
+
 <div class="note">
-  <strong>Kisebbségi Fidesz-kormány:</strong> Elméletileg lehetséges, ha a Fidesz+MH együtt eléri a 100 mandátumot. Gyakorlatilag ez csak a Nézőpont-közeli számok (Fidesz 46%, Tisza 40%) mellett állna elő — de akkor a Tiszának nem is lenne több szavazata, tehát nem ez a feltett kérdés.
+  <strong>Kisebbségi Fidesz-kormány:</strong> Elméletileg lehetséges, ha a Fidesz+MH együtt eléri a 100 mandátumot (lásd az alsó sávot). Gyakorlatilag ez csak a Nézőpont-közeli számok (Fidesz 46%, Tisza 40%) mellett állna elő — de akkor a Tiszának nem is lenne több szavazata, tehát nem ez a feltett kérdés.
 </div>
 
 <div class="conclusion">
@@ -102,6 +171,31 @@
 <p>Kb. <strong>4-5 pontos nyers Tisza-előnynél</strong> (ami a küszöb alattiak kiesése után ~7-8 pontos érvényes előnyt jelent) a Tisza már elkezdi a körzetek többségét nyerni, és a győzteskompenzáció irányt vált.</p>
 
 <h3>Hüvelykujjszabály</h3>
+
+<!-- Zóna-sáv vizualizáció -->
+<div class="zone-viz">
+  <div class="zone-strip">
+    <!-- Tick markok -->
+    <span class="zone-tick" style="left:0%">0</span>
+    <span class="zone-tick" style="left:30%">+3</span>
+    <span class="zone-tick" style="left:50%">+5</span>
+    <span class="zone-tick" style="left:100%">+10</span>
+    <!-- Szegmensek -->
+    <div class="zone-seg z-fidesz">Fidesz profitál</div>
+    <div class="zone-seg z-draw">Döntetlen</div>
+    <div class="zone-seg z-tisza">Tisza profitál</div>
+    <!-- Jelenlegi pozíció marker -->
+    <div class="zone-marker" style="left:73%">
+      <div class="zone-marker-arrow">▲</div>
+      <div class="zone-marker-text">Jelenlegi: +7,3</div>
+    </div>
+  </div>
+  <div class="zone-label-row">
+    <span class="zl-fidesz">Fidesz vidéki előnye érvényesül</span>
+    <span class="zl-draw">~kiegyenlített</span>
+    <span class="zl-tisza">Tisza körzeti többsége → kompenzáció nekik megy</span>
+  </div>
+</div>
 
 <table>
   <thead><tr><th>Tisza–Fidesz nyers rés</th><th>Kit segít a rendszer?</th><th>Miért?</th></tr></thead>
