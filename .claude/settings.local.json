@@ -2,30 +2,15 @@
   "permissions": {
     "allow": [
       "mcp__Claude_Preview__preview_start",
-      "mcp__2fd9edbe-4fc5-4841-930e-fae8c9bb0993__get_authenticated_user",
-      "Bash(gh api:*)",
-      "mcp__github__create_repository",
       "Bash(git init:*)",
+      "Bash(git remote:*)",
+      "Bash(git fetch:*)",
+      "Bash(git checkout:*)",
+      "Bash(git branch:*)",
+      "Bash(git reset:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git branch:*)",
-      "Bash(git remote:*)",
-      "WebSearch",
-      "Bash(git push:*)",
-      "Skill(update-config)",
-      "Skill(update-config:*)",
-      "Bash(sips -g pixelWidth -g pixelHeight /Users/gyuri/SynologyDrive/code/www/valasztas-2026/valasztas-2026.png)",
-      "Bash(curl -s \"https://net.jogtar.hu/jogszabaly?docid=a1400010.OGY\")",
-      "Bash(curl -s \"https://www.parlament.hu/irom41/01234/01234.pdf\" -o /tmp/hazszabaly.pdf)",
-      "Bash(echo \"exit: $?\")",
-      "WebFetch(domain:net.jogtar.hu)",
-      "WebFetch(domain:mkogy.jogtar.hu)",
-      "WebFetch(domain:infostart.hu)",
-      "WebFetch(domain:dfk-online.sze.hu)",
-      "WebFetch(domain:magyarnemzet.hu)",
-      "WebFetch(domain:www.parlament.hu)",
-      "WebFetch(domain:njt.hu)",
-      "WebFetch(domain:varosikurir.hu)"
+      "Bash(git push:*)"
     ]
   }
 }
