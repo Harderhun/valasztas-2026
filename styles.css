@@ -196,10 +196,12 @@ img { display: block; max-width: 100%; }
   background: rgba(26,25,21,0.45);
   z-index: 199;
   opacity: 0;
+  pointer-events: none;
   transition: opacity var(--transition-slow);
 }
 .sidebar-overlay.visible {
   opacity: 1;
+  pointer-events: auto;
 }
 
 /* ── Top bar (mobile) ───────────────────────────────────────── */
