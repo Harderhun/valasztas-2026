@@ -46,7 +46,7 @@ const PARTIES = [
   {
     abbr:      'MKKP',
     name:      'Magyar Kétfarkú Kutya Párt',
-    leader:    'Kovács Gergő',
+    leader:    'Nagy Dávid',
     color:     '#2B7A3B',
     pct:       2.8,
     threshold: 'edge',
